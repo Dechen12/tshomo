@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+fetch('http://localhost:8000/languages/', {
+    method: "post",
+    headers: {
+        "Accept": "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({id: 7, name: 'python', paradigm: 'object-oriented'})
+})
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+</script>
+</body>
+</html>
+
